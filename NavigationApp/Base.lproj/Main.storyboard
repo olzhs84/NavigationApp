@@ -45,7 +45,7 @@
         <!--View Controller-->
         <scene sceneID="K5A-gr-igL">
             <objects>
-                <viewController id="GFc-eo-pKl" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="greenViewController" id="GFc-eo-pKl" customClass="ViewController" customModule="NavigationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2RA-Md-8yH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,7 +57,17 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="on Yellow"/>
                                 <connections>
-                                    <segue destination="1uY-l9-MCe" kind="show" id="abf-W1-5Gf"/>
+                                    <action selector="onYellow:" destination="GFc-eo-pKl" eventType="touchUpInside" id="TtN-17-MaL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PPr-wu-76b">
+                                <rect key="frame" x="20" y="822" width="106" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="toPreviosScene:" destination="GFc-eo-pKl" eventType="touchUpInside" id="QuC-Um-UIy"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -73,10 +83,33 @@
         <!--View Controller-->
         <scene sceneID="D86-Kv-fyF">
             <objects>
-                <viewController id="1uY-l9-MCe" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="yellowViewController" id="1uY-l9-MCe" customClass="ViewController" customModule="NavigationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7fS-rF-Jce">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yf3-PX-P6G">
+                                <rect key="frame" x="133" y="419" width="149" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="on Main"/>
+                                <connections>
+                                    <action selector="onMainScene:" destination="1uY-l9-MCe" eventType="touchUpInside" id="j3L-Zd-E9P"/>
+                                    <action selector="onYellow:" destination="GFc-eo-pKl" eventType="touchUpInside" id="FMV-sC-rOE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IjI-nt-hmf">
+                                <rect key="frame" x="20" y="822" width="106" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="toPreviosScene:" destination="1uY-l9-MCe" eventType="touchUpInside" id="ZrK-LQ-iMk"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="5CK-2t-wZd"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                     </view>
@@ -89,7 +122,7 @@
         <!--View Controller-->
         <scene sceneID="EhD-f2-7zn">
             <objects>
-                <viewController id="Hev-x5-PBA" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="redViewController" id="Hev-x5-PBA" customClass="ViewController" customModule="NavigationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7lM-V6-Edq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -101,7 +134,17 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="on Green"/>
                                 <connections>
-                                    <segue destination="GFc-eo-pKl" kind="show" id="EUu-5M-m8u"/>
+                                    <action selector="onGreen:" destination="Hev-x5-PBA" eventType="touchUpInside" id="iI7-BY-aig"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y81-JV-gxk">
+                                <rect key="frame" x="20" y="822" width="106" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="toPreviosScene:" destination="Hev-x5-PBA" eventType="touchUpInside" id="2AC-1J-Zy7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -112,7 +155,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Khw-Ij-WxF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1400" y="456.69642857142856"/>
+            <point key="canvasLocation" x="1398.5507246376812" y="456.69642857142856"/>
         </scene>
     </scenes>
     <resources>
@@ -121,6 +164,9 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
